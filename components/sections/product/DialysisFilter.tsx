@@ -51,9 +51,11 @@ export default function DialysisFilter() {
           </p>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {sorted.map(product => (
-            <ProductCard key={product.id} product={product} />
+            <div key={product.id} className="w-full md:w-[calc(50%-0.75rem)]">
+              <ProductCard product={product} />
+            </div>
           ))}
         </div>
       </div>
