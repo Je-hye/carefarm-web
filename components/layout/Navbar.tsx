@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 const NAV_LINKS = [
@@ -24,8 +25,14 @@ export default function Navbar() {
       scrolled ? 'bg-surface-card border-b border-border-line shadow-sm' : 'bg-transparent'
     }`}>
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="font-heading font-bold text-xl text-text-primary">
-          케어<span className="text-coral">팜</span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/branding/logo_wordmark.png"
+            alt="케어팜 로고"
+            width={100}
+            height={40}
+            priority
+          />
         </Link>
 
         {/* 데스크톱 링크 */}
