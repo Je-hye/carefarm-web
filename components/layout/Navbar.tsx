@@ -27,11 +27,13 @@ export default function Navbar() {
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image
-            src="/branding/logo_wordmark.png"
+            src="/branding/logo_A.png"
             alt="케어팜 로고"
-            width={100}
-            height={40}
+            width={200}
+            height={100}
             priority
+            className="h-10 w-auto"
+            style={{ mixBlendMode: 'multiply' }}
           />
         </Link>
 

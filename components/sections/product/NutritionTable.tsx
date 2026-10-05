@@ -1,7 +1,8 @@
 const ROWS = [
-  { nutrient: '칼륨', carefarm: '100mg', general: '400mg 이상', limit: '2,000mg/일' },
-  { nutrient: '나트륨', carefarm: '0mg', general: '200mg 이상', limit: '기준 개인 상이' },
-  { nutrient: '인', carefarm: '저함유', general: '고함유', limit: '기준 개인 상이' },
+  { nutrient: '칼륨', carefarm: '약 35mg', general: '400mg 이상', limit: '2,000mg/일' },
+  { nutrient: '나트륨', carefarm: '1mg 미만', general: '200mg 이상', limit: '2,400mg/일' },
+  { nutrient: '인', carefarm: '약 12mg', general: '80mg 이상', limit: '1,000mg/일' },
+  { nutrient: '열량', carefarm: '약 100kcal', general: '—', limit: '—' },
 ]
 
 export default function NutritionTable() {
@@ -34,8 +35,8 @@ export default function NutritionTable() {
           </table>
         </div>
         <p className="font-body text-xs text-text-secondary mt-4 opacity-70">
-          * 케어팜 수치는 개발 목표 기준이며 성분 검증 완료 후 확정됩니다.
-          &nbsp;출처: 투석 한도 — 질병관리청
+          * 케어팜 수치는 설계 목표치이며 한국식품과학연구원 영양분 분석 완료 후 확정됩니다.<br />
+          투석 일일 제한 기준: 칼륨 2,000mg · 나트륨 2,400mg · 인 1,000mg (질병관리청 · National Kidney Foundation)
         </p>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import DialysisFilter from '@/components/sections/product/DialysisFilter'
 import NutritionTable from '@/components/sections/product/NutritionTable'
+import RecipeVerification from '@/components/sections/product/RecipeVerification'
 import OriginStory from '@/components/sections/product/OriginStory'
 import ExpertQuote from '@/components/sections/product/ExpertQuote'
 import Button from '@/components/ui/Button'
@@ -17,6 +18,7 @@ export default function ProductPage() {
       </section>
       <DialysisFilter />
       <NutritionTable />
+      <RecipeVerification />
       <OriginStory />
       <ExpertQuote />
       <section className="bg-surface-base py-16 text-center">

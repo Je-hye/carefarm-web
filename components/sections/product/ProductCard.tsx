@@ -4,8 +4,9 @@ import Button from '@/components/ui/Button'
 import NutrientBar from '@/components/ui/NutrientBar'
 import { Product } from '@/lib/products'
 
-const DAILY_LIMIT_POTASSIUM = 2000
-const DAILY_LIMIT_SODIUM    = 2000
+const DAILY_LIMIT_POTASSIUM  = 2000
+const DAILY_LIMIT_SODIUM     = 2400
+const DAILY_LIMIT_PHOSPHORUS = 1000
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
@@ -37,13 +38,20 @@ export default function ProductCard({ product }: { product: Product }) {
           dailyLimit={DAILY_LIMIT_SODIUM}
           compareValue={200}
         />
-        <div className="flex items-center gap-3">
-          <span className="font-body text-xs text-text-secondary w-12 shrink-0">인</span>
-          <Badge color="olive" className="text-xs">저함유</Badge>
-          <span className="font-body text-xs text-text-secondary opacity-60 ml-2">
-            (정확한 수치는 성분 검증 후 업데이트 예정)
-          </span>
-        </div>
+        {typeof product.phosphorus === 'number' ? (
+          <NutrientBar
+            nutrient="인"
+            value={product.phosphorus}
+            unit="mg"
+            dailyLimit={DAILY_LIMIT_PHOSPHORUS}
+            compareValue={80}
+          />
+        ) : (
+          <div className="flex items-center gap-3">
+            <span className="font-body text-xs text-text-secondary w-12 shrink-0">인</span>
+            <Badge color="olive" className="text-xs">저함유</Badge>
+          </div>
+        )}
       </div>
 
       <Button href="/order" className="w-full text-center">주문하기</Button>
