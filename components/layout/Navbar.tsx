@@ -27,7 +27,7 @@ export default function Navbar() {
       <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image
-            src="/branding/logo_A.png"
+            src="/branding/logo_anim.webp"
             alt="케어팜 로고"
             width={200}
             height={100}
