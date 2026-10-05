@@ -24,7 +24,7 @@ export default function Navbar() {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-200 bg-surface-base ${
       scrolled ? 'border-b border-border-line shadow-sm' : ''
     }`}>
-      <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image
             src="/branding/logo_A.png"
@@ -32,7 +32,7 @@ export default function Navbar() {
             width={200}
             height={100}
             priority
-            className="h-14 w-auto"
+            className="h-16 w-auto"
           />
         </Link>
 
