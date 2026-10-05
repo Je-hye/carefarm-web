@@ -21,8 +21,8 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-200 ${
-      scrolled ? 'bg-surface-card border-b border-border-line shadow-sm' : 'bg-transparent'
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-200 bg-surface-base ${
+      scrolled ? 'border-b border-border-line shadow-sm' : ''
     }`}>
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center">
@@ -33,7 +33,6 @@ export default function Navbar() {
             height={100}
             priority
             className="h-10 w-auto"
-            style={{ mixBlendMode: 'multiply' }}
           />
         </Link>
 
